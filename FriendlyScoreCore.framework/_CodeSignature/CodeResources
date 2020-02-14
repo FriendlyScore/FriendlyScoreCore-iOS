@@ -6,35 +6,35 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		E1JdUZb27VnncINdS34hiA+8LhA=
+		wYQbcsRvv4hW1eCeHTbCZAp55wY=
 		</data>
 		<key>CodeVerificationViewController.nib/objects-13.0+.nib</key>
 		<data>
-		3s+OGEbdGR7y9TGSIOCcsxerD6I=
+		yZHHJn4Qjy7knC8BwwPaiG+n94A=
 		</data>
 		<key>CodeVerificationViewController.nib/runtime.nib</key>
 		<data>
-		CVINgTokl+A2OGydgbBnJB1TpTw=
+		DLB3jDKG/3jvfQmmf/GPC6yuxXo=
 		</data>
 		<key>ConfigLoaderViewController.nib/objects-13.0+.nib</key>
 		<data>
-		C6EagfZDdrc7kZVM0lYxWw332cQ=
+		pTTUnn0T71TFlrw3MVO+dQZQDKM=
 		</data>
 		<key>ConfigLoaderViewController.nib/runtime.nib</key>
 		<data>
-		BwsuYUVZl6JnC5njpMykU4L7i8A=
+		9MMYZt9O5AxGyPGa3Wvu3J7Jwxs=
 		</data>
 		<key>GenericScoreSourceViewController.nib/objects-13.0+.nib</key>
 		<data>
-		JJ/6FuhkNDh1tRcHQs6MGqPQpEE=
+		TDH4IzVCDB9RrkGeEhIll6Vs51E=
 		</data>
 		<key>GenericScoreSourceViewController.nib/runtime.nib</key>
 		<data>
-		AplXlA8RvV67p51iRHBQ1pFc7t8=
+		q7wFfL0xfy5sC23ln7/Nx+Thwsw=
 		</data>
 		<key>Headers/FriendlyScoreCore-Swift.h</key>
 		<data>
-		Tk9XtHTeB0F9FlS1b06o2V3xDJc=
+		84vjVDKhFWaeFB16vMEGGq+qMJk=
 		</data>
 		<key>Headers/FriendlyScoreCore.h</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/FriendlyScoreCore.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		uE5ufEvZilZ7R7rv0zYwG5nCJ2Q=
+		DEHvWVzqjzO1SMyhf5i3sFfO2Ao=
 		</data>
 		<key>Modules/FriendlyScoreCore.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Modules/FriendlyScoreCore.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		uE5ufEvZilZ7R7rv0zYwG5nCJ2Q=
+		DEHvWVzqjzO1SMyhf5i3sFfO2Ao=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -74,17 +74,26 @@
 		</data>
 		<key>PhoneNumberViewController.nib/objects-13.0+.nib</key>
 		<data>
-		zi2bCqjyQyC7uRq6qs0P/POd94k=
+		soyMELklAMsXBJ+TWNEC8Mv7Fog=
 		</data>
 		<key>PhoneNumberViewController.nib/runtime.nib</key>
 		<data>
-		RPcFsQoJnb8w16rOqTjN1Le4wqI=
+		s9q18f56sx1V/3bVrSDHPOVQDf4=
 		</data>
 		<key>en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vdHiBL5sMckvTMyz+NKRr+IIx6s=
+			SwsTDmSuZB+cTRRO93cFOCm6ePY=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>es.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			YmKSVWpH83aoBm1QZBOZJVT5sIA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -93,7 +102,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0rDrcz7NOokokgo2t71OFdI4tuk=
+			PD/JRnnzR0OiPEKcUS5FajM7eo0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -102,7 +111,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			c7rXRCa9cFQ9DqXiK1b9CC/2MLc=
+			jKeP4iKq5/hzGQHh3hGcdjiZ7ys=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -114,56 +123,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			iVTJ68JagUvddSm2zacCvgZCC/5KydV1QriBlet1fLQ=
+			v6UUfNmbJV8tGifFAyRmxDuVWEdAe1c0vwsloyA6TcY=
 			</data>
 		</dict>
 		<key>CodeVerificationViewController.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cEvbqMGmLXkT3ja2QX+erdCx1FINkA3qvbDmZWCUq7w=
+			hWTx4Vfmjs0fHc+rU3QIaP8xg9sOkx1bm7AoLFBNsrM=
 			</data>
 		</dict>
 		<key>CodeVerificationViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			K0tXur8SranmIkXwip24D+B+TfZFO5iO0YBA8IMBeCc=
+			g//9jt/QqsJpG/cS47/lt9yfxrB96QrB8W9mkvoqi4Q=
 			</data>
 		</dict>
 		<key>ConfigLoaderViewController.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sleXTPoeLxuzSPvo4wkHqn0XsMU6zPPFI9msM5Cnnww=
+			AQsbO6+272w5gvoTwN0lJsrdG2XygpBN0m55jR4ZG2k=
 			</data>
 		</dict>
 		<key>ConfigLoaderViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fk8BRuh/n1iSxtH/Ra49HjxC50dPgd9AB5swQPtidGU=
+			+E+EQ8GCe1e4gYOdLd9U7RwGOr6aQGjwJB43ORFFFrA=
 			</data>
 		</dict>
 		<key>GenericScoreSourceViewController.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wdJ351yzc9+RZZ4CQKYZ64VUEpG3P0us9f+kiGgg1Hk=
+			XlBQoSkWstyAMpj33TDtH6+euShybl8fibrbpui5d2Y=
 			</data>
 		</dict>
 		<key>GenericScoreSourceViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			f8iiXxkNo0hmc5ZPH7GBHfyaoF/L9arKqJzhrOuEYnk=
+			gvWacYwcvrIT3EymE8+dQNsD14fv9iRup70GsaaMRxA=
 			</data>
 		</dict>
 		<key>Headers/FriendlyScoreCore-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lr+mvfVNsNE3rmxm4V9B1BiyewdLVH5vFzLi7WxMsBg=
+			ujRk4hsRg/PNKzCK6pCu2AQuJ9/Ma1ODBmIWybSeeP8=
 			</data>
 		</dict>
 		<key>Headers/FriendlyScoreCore.h</key>
@@ -191,7 +200,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IG+OPucJOJzOJn5MrzQT4jMO3UqlX+wMBFiJaF2fl3g=
+			9ReAWmxPqiJQ1klEzFPB71Avcx2vzKWf4kIcbd0Y2xc=
 			</data>
 		</dict>
 		<key>Modules/FriendlyScoreCore.swiftmodule/arm64.swiftdoc</key>
@@ -212,7 +221,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IG+OPucJOJzOJn5MrzQT4jMO3UqlX+wMBFiJaF2fl3g=
+			9ReAWmxPqiJQ1klEzFPB71Avcx2vzKWf4kIcbd0Y2xc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -226,21 +235,30 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			f5Ip0wNHyDZIJDL5NYlcMKpiN2uhpKeJalea4do9bXc=
+			NapEriAwpABbite7l27JFfr3vkdY1TGws/ylfZ0cO8E=
 			</data>
 		</dict>
 		<key>PhoneNumberViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OyJ2+duuVbSgvCt5qZvaKooDhTyPMcSYJuEDGbslWbQ=
+			jl4AT2890qGQukRzgwOL9VTEO9Dp2y/6iz8l9oJINrk=
 			</data>
 		</dict>
 		<key>en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7Di2DKipXi+2AawSXb+8XuS4C9ElX5CiE1I0tGydWNI=
+			WZxB5a8F/vllwXZxULOspwm/mTr4DLTZ8fiFH4o80DY=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>es.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5oEYRV5PQPb0tJW8XxP3/OhcwtY1Uatv9+3ZK5GHGR4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -249,7 +267,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gajPw8wPax5e3GSbcA/g3Pgr0p65pMCGodUoosSCBy8=
+			Pzhmo/tYs7Bc5u7YoTL1CO3NoRx7B1ALv0mXrpsn65w=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -258,7 +276,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fICiQzpvrHDZjEzZtcBpnMmfBeYpmWQYeiTTFjIDTQk=
+			qZRtkeGAtgrxZNHtoCmAB69bKvcrE5mVcdDxKF7dK74=
 			</data>
 			<key>optional</key>
 			<true/>
