@@ -1,0 +1,11 @@
+framework module FriendlyScoreCore {
+  umbrella header "FriendlyScoreCore.h"
+
+  export *
+  module * { export * }
+}
+
+module FriendlyScoreCore.Swift {
+    header "FriendlyScoreCore-Swift.h"
+    requires objc
+}

@@ -1,0 +1,849 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.1.3 effective-4.1.50 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4 -enforce-exclusivity=checked -O -module-name FriendlyScoreCore
+import AVFoundation
+import Alamofire
+import SystemConfiguration.CaptiveNetwork
+import Contacts
+import CoreLocation
+import CoreMotion
+import CoreTelephony
+import Device
+import EventKit
+import Foundation
+@_exported import FriendlyScoreCore
+import Hero
+import IQKeyboardManager
+import JGProgressHUD
+import Moya
+import ObjectMapper
+import PhoneNumberKit
+import Result
+import SnapKit
+import Swift
+import SystemConfiguration
+import UIKit
+public protocol TypedQuestion {
+  var type: FriendlyScoreCore.QuestionType { get set }
+  var text: Swift.String { get set }
+  var id: Swift.String { get set }
+  var childQuestions: Swift.Array<FriendlyScoreCore.TypedQuestion> { get set }
+}
+public class Image {
+  public class func use(_ name: Swift.String) -> UIKit.UIImage?
+  public class func with(dataSource: FriendlyScoreCore.DataSource) -> UIKit.UIImage
+  @objc deinit
+}
+public enum SocialNetwork {
+  case google
+  case twitter
+  public var scopes: Swift.Array<Swift.String> {
+    get
+  }
+  public static func == (a: FriendlyScoreCore.SocialNetwork, b: FriendlyScoreCore.SocialNetwork) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public enum DataSource : Swift.String {
+  case twitter
+  case google
+  case instagram
+  case contacts
+  case location
+  case calendars
+  case photos
+  case financial
+  case wifi
+  case device
+  case activity
+  case verification
+  case declaredData
+  case outlook
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+}
+extension DataSource {
+  public var dataProcessStatusName: Swift.String {
+    get
+  }
+}
+public enum DataSourcePage : Swift.String, Swift.Codable {
+  case verification
+  case lifestyle
+  case financial
+  case banks
+  case education
+  case psychometry
+  case business
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum DataProcessStatus : Swift.String {
+  case finished
+  case inProgress
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension URL {
+  public var queryParameters: [Swift.String : Swift.String]? {
+    get
+  }
+}
+extension CMMotionActivity {
+  public func toJSON() -> FriendlyScoreCore.JSONData
+}
+extension EKReminder {
+  public func toJSON() -> FriendlyScoreCore.JSONData
+}
+extension NSNotification.Name {
+  public static let bankCode: Foundation.Notification.Name
+  public static let bankCodeError: Foundation.Notification.Name
+}
+extension EKEvent {
+  public func toJSON() -> FriendlyScoreCore.JSONData
+}
+extension CNContact {
+  public func toJSON() -> FriendlyScoreCore.JSONData
+}
+extension UINavigationController {
+  @objc override dynamic open var shouldAutorotate: Swift.Bool {
+    @objc get
+  }
+}
+extension Bundle {
+  public static var FriendlyScore: Foundation.Bundle? {
+    get
+  }
+}
+extension String {
+  public func heightWithConstrainedWidth(width: CoreGraphics.CGFloat, font: UIKit.UIFont) -> CoreGraphics.CGFloat
+}
+extension UIImage {
+  public func thumbnail(maxPixelSize: CoreGraphics.CGFloat, completion: @escaping (UIKit.UIImage) -> ())
+  public static func from(color: UIKit.UIColor) -> UIKit.UIImage
+  public func colorized(color: UIKit.UIColor) -> UIKit.UIImage
+  convenience public init?(color: UIKit.UIColor, size: CoreGraphics.CGSize = CGSize(width: 1, height: 1))
+  public var noir: UIKit.UIImage? {
+    get
+  }
+  public func image(alpha: CoreGraphics.CGFloat) -> UIKit.UIImage?
+  public static func thumbnailFromMovie(url: Foundation.URL) -> UIKit.UIImage
+  public func rotate(radians: Swift.Float) -> UIKit.UIImage?
+}
+extension UIView {
+  public func showView()
+  public func hideView()
+}
+extension Response {
+  final public func mapJSON<T>() throws -> T where T : ObjectMapper.Mappable
+}
+extension Response {
+  final public var errorMessage: FriendlyScoreCore.ErrorMessage? {
+    get
+  }
+  final public func handleErrorMessage()
+  final public func handleStatusCode()
+}
+extension UIImage {
+  public func fixOrientation() -> UIKit.UIImage
+}
+extension UIFont {
+  public static var titleFontSize: CoreGraphics.CGFloat {
+    get
+  }
+  public static var descriptionFontSize: CoreGraphics.CGFloat {
+    get
+  }
+  public static var submitFontSize: CoreGraphics.CGFloat {
+    get
+  }
+  public static var submitButtonDisabledFontSize: CoreGraphics.CGFloat {
+    get
+  }
+  public static var submitButtonEnabledFontSize: CoreGraphics.CGFloat {
+    get
+  }
+  public static var cardMarginVertical: CoreGraphics.CGFloat {
+    get
+  }
+  public static var cardMarginHorizontal: CoreGraphics.CGFloat {
+    get
+  }
+}
+extension Error {
+  public func handle()
+}
+extension UIColor {
+  public var lighterColor: UIKit.UIColor {
+    get
+  }
+  public func lighterColor(removeSaturation val: CoreGraphics.CGFloat, resultAlpha alpha: CoreGraphics.CGFloat) -> UIKit.UIColor
+}
+extension UIView {
+  public func constrain(view: UIKit.UIView)
+}
+extension UIWindow {
+  public static var topMostView: UIKit.UIView? {
+    get
+  }
+  public static var topMostViewController: UIKit.UIViewController? {
+    get
+  }
+}
+extension UIColor {
+  convenience public init(hex6: Swift.UInt32, alpha: CoreGraphics.CGFloat = 1)
+}
+public class AnswerModel : ObjectMapper.Mappable {
+  public var dontUnderstand: Swift.Bool
+  public var followupQuestionSet: FriendlyScoreCore.QuestionSetModel?
+  required public init?(map: ObjectMapper.Map)
+  public func mapping(map: ObjectMapper.Map)
+  @objc deinit
+}
+public class DataProcessModel : ObjectMapper.Mappable {
+  public var name: Swift.String?
+  public var status: FriendlyScoreCore.DataProcessStatus?
+  required public init?(map: ObjectMapper.Map)
+  public func mapping(map: ObjectMapper.Map)
+  @objc deinit
+}
+public enum InternalError : Swift.Error {
+  case parser
+  case invalidCredentialFormat
+  public static func == (a: FriendlyScoreCore.InternalError, b: FriendlyScoreCore.InternalError) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public protocol DataSourceViewControllerFactory {
+  var id: FriendlyScoreCore.DataSourcePage { get set }
+  func create(delegate: FriendlyScoreCore.DataSourceViewControllerDelegate, credentials: FriendlyScoreCore.Credentials, api: FriendlyScoreCore.API, config: FriendlyScoreCore.Config, components: [FriendlyScoreCore.ComponentModel]?, isFormStep: Swift.Bool) -> FriendlyScoreCore.DataSourceViewController?
+}
+public class IntegerQuestionModel : FriendlyScoreCore.BaseQuestionModel<FriendlyScoreCore.IntegerAnswerModel> {
+  public var min: Swift.Int
+  public var max: Swift.Int
+  public var minLabel: Swift.String
+  public var maxLabel: Swift.String
+  override public func mapping(map: ObjectMapper.Map)
+  required public init?(map: ObjectMapper.Map)
+  @objc deinit
+}
+public class ComponentModel : ObjectMapper.Mappable {
+  public var name: FriendlyScoreCore.ScoreSourceId!
+  public var enabled: Swift.Bool!
+  public var config: FriendlyScoreCore.JSONData?
+  required public init?(map: ObjectMapper.Map)
+  public func mapping(map: ObjectMapper.Map)
+  @objc deinit
+}
+@objc open class BaseNavigationController : UIKit.UINavigationController, UIKit.UINavigationControllerDelegate {
+  @objc override dynamic public func viewDidLoad()
+  @objc public func navigationController(_ navigationController: UIKit.UINavigationController, willShow viewController: UIKit.UIViewController, animated: Swift.Bool)
+  public func setDefaultAnimationType()
+  @available(iOS 5.0, *)
+  @objc override dynamic public init(navigationBarClass: Swift.AnyClass?, toolbarClass: Swift.AnyClass?)
+  @objc override dynamic public init(rootViewController: UIKit.UIViewController)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+extension BaseNavigationController {
+  public func pushViewControllerWithFadeAnimation(_ vc: UIKit.UIViewController)
+}
+public typealias JSONData = [Swift.String : Any]
+public class Interaction<A> where A : FriendlyScoreCore.AnswerModel {
+  public var interactions: Swift.Array<FriendlyScoreCore.JSONData>
+  public enum Touch : Swift.String {
+    case up
+    case down
+    public typealias RawValue = Swift.String
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public func subscribe()
+  public init()
+  public func register(value: A, touch: FriendlyScoreCore.Interaction<A>.Touch, isLastInteraction: Swift.Bool = false)
+  public func complete(value: A, touch: FriendlyScoreCore.Interaction<A>.Touch)
+  @objc deinit
+}
+public enum SocialData {
+  case google(accessToken: Swift.String, expiresIn: Swift.Double, idToken: Swift.String)
+  case twitter(userId: Swift.String)
+  case outlook(accessToken: Swift.String, expiresIn: Swift.Double, idToken: Swift.String)
+}
+public class QuestionSetModel : ObjectMapper.Mappable {
+  public var id: Swift.String
+  public var locale: Swift.String?
+  public var questions: Swift.Array<FriendlyScoreCore.TypedQuestion>
+  public var title: Swift.String?
+  public var status: FriendlyScoreCore.PsychometryStatus?
+  required public init?(map: ObjectMapper.Map)
+  public func mapping(map: ObjectMapper.Map)
+  @objc deinit
+}
+@objc public class DashedLineView : UIKit.UIView {
+  public var lineLayer: QuartzCore.CAShapeLayer
+  public func draw()
+  @objc override dynamic public func layoutSubviews()
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc public class RadioView : UIKit.UIView {
+  public var lineLayer: QuartzCore.CAShapeLayer
+  public var fillLayer: QuartzCore.CAShapeLayer
+  public var fill: Swift.Bool {
+    get
+    set
+  }
+  public func draw()
+  @objc override dynamic public func layoutSubviews()
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc public class SubmitButton : UIKit.UIButton {
+  public var leadColor: UIKit.UIColor {
+    get
+    set
+  }
+  public var fill: Swift.Bool {
+    get
+    set
+  }
+  public var textColor: UIKit.UIColor {
+    get
+    set
+  }
+  public var buttonFont: UIKit.UIFont {
+    get
+    set
+  }
+  public var isUnderlined: Swift.Bool {
+    get
+    set
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  public func setup()
+  @objc override dynamic public var isEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  public var loading: Swift.Bool {
+    get
+    set
+  }
+  @objc override dynamic public func layoutSubviews()
+  public func addBorder()
+  @objc deinit
+}
+extension CALayer {
+  public struct ShadowDescription {
+    public var offset: CoreGraphics.CGSize
+    public var color: CoreGraphics.CGColor
+    public var opacity: Swift.Float
+    public var radius: CoreGraphics.CGFloat
+    public init(offset: CoreGraphics.CGSize, color: CoreGraphics.CGColor, opacity: Swift.Float, radius: CoreGraphics.CGFloat)
+  }
+  public func addShadow(with description: QuartzCore.CALayer.ShadowDescription)
+  public func removeShadow()
+  public func roundCorners(radius: CoreGraphics.CGFloat)
+}
+extension CALayer.ShadowDescription {
+  public static var friendlyScoreButton: QuartzCore.CALayer.ShadowDescription {
+    get
+  }
+  public static var friendlyScorePanel: QuartzCore.CALayer.ShadowDescription {
+    get
+  }
+}
+public protocol CollectionViewConfigurationProtocol {
+  var cellSize: CoreGraphics.CGSize { get }
+  func itemSpacingAt(section: Swift.Int) -> CoreGraphics.CGFloat
+  func lineSpacingAt(section: Swift.Int) -> CoreGraphics.CGFloat
+  var sectionsNum: Swift.Int { get }
+  var itemsNum: Swift.Int { get set }
+}
+public protocol ReusableView : AnyObject {
+  static var defaultReuseIdentifier: Swift.String { get }
+}
+extension ReusableView where Self : UIKit.UIView {
+  public static var defaultReuseIdentifier: Swift.String {
+    get
+  }
+}
+public protocol NibLoadableView : AnyObject {
+  static var nibName: Swift.String { get }
+}
+extension NibLoadableView where Self : UIKit.UIView {
+  public static var nibName: Swift.String {
+    get
+  }
+}
+extension UICollectionViewCell : FriendlyScoreCore.ReusableView, FriendlyScoreCore.NibLoadableView {
+}
+extension UICollectionView {
+  public func register<T>(_: T.Type, bundle: Foundation.Bundle? = nil) where T : UIKit.UICollectionViewCell
+  public func dequeueReusableCell<T>(for indexPath: Foundation.IndexPath) -> T where T : UIKit.UICollectionViewCell
+}
+extension UITableViewCell : FriendlyScoreCore.ReusableView, FriendlyScoreCore.NibLoadableView {
+}
+extension UITableView {
+  public func register<T>(_: T.Type, bundle: Foundation.Bundle? = nil) where T : FriendlyScoreCore.NibLoadableView, T : FriendlyScoreCore.ReusableView
+  public func dequeueReusableCell<T>(for indexPath: Foundation.IndexPath) -> T where T : FriendlyScoreCore.NibLoadableView, T : FriendlyScoreCore.ReusableView
+}
+public class AnswerResponseModel : ObjectMapper.Mappable {
+  public var questionId: Swift.String!
+  public var questionSet: FriendlyScoreCore.QuestionSetModel!
+  required public init?(map: ObjectMapper.Map)
+  public func mapping(map: ObjectMapper.Map)
+  @objc deinit
+}
+public class AnswersResponseModel : ObjectMapper.Mappable {
+  public var followupQuestions: Swift.Array<FriendlyScoreCore.AnswerResponseModel>
+  required public init?(map: ObjectMapper.Map)
+  public func mapping(map: ObjectMapper.Map)
+  @objc deinit
+}
+public struct PhoneNumber : Swift.ExpressibleByStringLiteral {
+  public let rawValue: Swift.String
+  public init(stringLiteral value: Swift.String)
+  public init(unicodeScalarLiteral value: Swift.String)
+  public init(extendedGraphemeClusterLiteral value: Swift.String)
+  public typealias StringLiteralType = Swift.String
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+}
+public enum ScoreSourceId : Swift.String {
+  case twitter
+  case google
+  case outlook
+  case instagram
+  case calendar
+  case device
+  case verification
+  case cv
+  case nameLastName
+  case dateOfBirth
+  case homeAndWorkAddress
+  case question
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class ErrorMessage : ObjectMapper.Mappable {
+  public var code: Swift.Int!
+  public var message: Swift.String!
+  required public init?(map: ObjectMapper.Map)
+  public func mapping(map: ObjectMapper.Map)
+  @objc deinit
+}
+public enum FriendlyScoreEvent {
+  case userClosedView
+  case userCompletedFlow(token: FriendlyScoreCore.UserToken)
+}
+public class PsychometryStatus : ObjectMapper.Mappable {
+  public var needsUpdate: Swift.Bool
+  public var questionAnsweredCount: Swift.Int
+  public var questionTotalCount: Swift.Int
+  required public init?(map: ObjectMapper.Map)
+  public func mapping(map: ObjectMapper.Map)
+  @objc deinit
+}
+public class SelectQuestionModel : FriendlyScoreCore.BaseQuestionModel<FriendlyScoreCore.SelectAnswerModel> {
+  public var options: Swift.Array<FriendlyScoreCore.SelectOptionModel>
+  override public func mapping(map: ObjectMapper.Map)
+  required public init?(map: ObjectMapper.Map)
+  @objc deinit
+}
+public struct WifiInfo {
+  public var name: Swift.String
+  public var mac: Swift.String
+  public var mobileNetworkCode: Swift.String
+  public var mobileCountryCode: Swift.String
+}
+public struct UserToken : Swift.ExpressibleByStringLiteral, Swift.Codable {
+  public let rawValue: Swift.String
+  public init(stringLiteral value: Swift.String)
+  public init(unicodeScalarLiteral value: Swift.String)
+  public init(extendedGraphemeClusterLiteral value: Swift.String)
+  public typealias StringLiteralType = Swift.String
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+}
+public class BorrowerPersonalDataModel : ObjectMapper.Mappable {
+  public var id: Swift.String!
+  public var email: Swift.String?
+  public var name: Swift.String?
+  public var lastName: Swift.String?
+  public var dob: Swift.Double?
+  public var postcode: Swift.String?
+  public var town: Swift.String?
+  required public init?(map: ObjectMapper.Map)
+  public func mapping(map: ObjectMapper.Map)
+  @objc deinit
+}
+public struct FlowConfigure {
+  public let window: UIKit.UIWindow?
+  public let navigationController: FriendlyScoreCore.BaseNavigationController?
+  public let parent: FriendlyScoreCore.FlowController?
+  public init(window: UIKit.UIWindow?, navigationController: FriendlyScoreCore.BaseNavigationController?, parent: FriendlyScoreCore.FlowController?)
+}
+public protocol FlowController {
+  var childFlow: FriendlyScoreCore.FlowController? { get set }
+  var configure: FriendlyScoreCore.FlowConfigure { get set }
+  init(configure: FriendlyScoreCore.FlowConfigure)
+  func start()
+}
+public typealias Config = (modules: [FriendlyScoreCore.ModuleModel], dataProcessStatuses: [FriendlyScoreCore.DataProcessModel], personalData: FriendlyScoreCore.BorrowerPersonalDataModel)
+extension UIView {
+  public var gardientBackgroundColor: [UIKit.UIColor] {
+    get
+    set
+  }
+  public func addDropShadow(color: UIKit.UIColor, opacity: Swift.Double, radius: Swift.Double, offset: CoreGraphics.CGSize)
+  public func roundCorners(_ corners: UIKit.UIRectCorner, radius: CoreGraphics.CGFloat)
+  public func circle()
+  public var cornerRadius: Swift.Double {
+    get
+    set
+  }
+}
+public typealias UIButtonTargetClosure = (UIKit.UIButton) -> ()
+@objc public class ClosureWrapper : ObjectiveC.NSObject {
+  final public let closure: FriendlyScoreCore.UIButtonTargetClosure
+  public init(_ closure: @escaping FriendlyScoreCore.UIButtonTargetClosure)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension UISlider {
+  public var thumbView: UIKit.UIImageView? {
+    get
+  }
+}
+extension UIButton {
+  public func addTargetClosure(closure: @escaping FriendlyScoreCore.UIButtonTargetClosure)
+  @objc dynamic public func closureAction()
+}
+public struct FriendlyScore {
+  public static var presentingViewController: UIKit.UIViewController?
+  public typealias SocialDataRequestHandler = ((FriendlyScoreCore.DataRequest) -> ())
+  public typealias AnalyticsEventHandler = ((FriendlyScoreCore.AnalyticsEvent) -> ())
+  public typealias EventsHandler = ((FriendlyScoreCore.FriendlyScoreEvent) -> ())
+  public typealias ErrorsHandler = ((FriendlyScoreCore.FriendlyScoreError) -> ())
+  public static var socialDataHandler: FriendlyScoreCore.FriendlyScore.SocialDataRequestHandler?
+  public static var analitycsEventHandler: FriendlyScoreCore.FriendlyScore.AnalyticsEventHandler?
+  public static var eventsHandler: FriendlyScoreCore.FriendlyScore.EventsHandler?
+  public static var errorsHandler: FriendlyScoreCore.FriendlyScore.ErrorsHandler?
+  public static var url: FriendlyScoreCore.Url
+  public static var modalPresentationStyle: UIKit.UIModalPresentationStyle
+  public static var currentSocialNetwork: FriendlyScoreCore.SocialNetwork?
+  public static func show(with credentials: FriendlyScoreCore.Credentials)
+  public static func show(page: FriendlyScoreCore.DataSourcePage, with credentials: FriendlyScoreCore.Credentials)
+  public static func handleQueryParameters(for url: Foundation.URL)
+}
+public class Storage {
+  public enum Directory {
+    case documents
+    case caches
+    public static func == (a: FriendlyScoreCore.Storage.Directory, b: FriendlyScoreCore.Storage.Directory) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  public static func store<T>(_ object: T, to directory: FriendlyScoreCore.Storage.Directory, as fileName: Swift.String) where T : Swift.Encodable
+  public static func retrieve<T>(_ fileName: Swift.String, from directory: FriendlyScoreCore.Storage.Directory, as type: T.Type) -> T? where T : Swift.Decodable
+  public static func clear(_ directory: FriendlyScoreCore.Storage.Directory)
+  public static func remove(_ fileName: Swift.String, from directory: FriendlyScoreCore.Storage.Directory)
+  public static func fileExists(_ fileName: Swift.String, in directory: FriendlyScoreCore.Storage.Directory) -> Swift.Bool
+  @objc deinit
+}
+public struct Url {
+  public var base: Foundation.URL
+  public var api: Foundation.URL
+}
+public enum Environment : Swift.String {
+  case production
+  case sandbox
+  case developer
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class SelectOptionModel : ObjectMapper.Mappable {
+  public var id: Swift.String
+  public var text: Swift.String
+  required public init?(map: ObjectMapper.Map)
+  public func mapping(map: ObjectMapper.Map)
+  @objc deinit
+}
+public class SelectAnswerModel : FriendlyScoreCore.AnswerModel {
+  public var id: Swift.String
+  required public init?(map: ObjectMapper.Map)
+  convenience public init?(id: Swift.String)
+  override public func mapping(map: ObjectMapper.Map)
+  @objc deinit
+}
+extension MultiTarget : Moya.AccessTokenAuthorizable {
+  public var authorizationType: Moya.AuthorizationType {
+    get
+  }
+}
+public class API {
+  public var api: Moya.MoyaProvider<Moya.MultiTarget>!
+  final public let credentials: FriendlyScoreCore.Credentials!
+  public init(credentials: FriendlyScoreCore.Credentials)
+  public func dataProcessStatus(completion: @escaping (Swift.Array<FriendlyScoreCore.DataProcessModel>) -> (), failure: @escaping (Swift.Error?) -> ())
+  public func personalData(name: Swift.String, lastName: Swift.String, dob: Swift.String, completion: @escaping (FriendlyScoreCore.BorrowerPersonalDataModel) -> (), failure: @escaping (Swift.Error?) -> ())
+  @objc deinit
+}
+public struct User : Swift.Codable {
+  public var token: FriendlyScoreCore.UserToken
+  public static func archive(_ user: FriendlyScoreCore.User, for key: Swift.String)
+  public static func load(for key: Swift.String) -> FriendlyScoreCore.User?
+  public static func delete(for key: Swift.String)
+  public init(token: FriendlyScoreCore.UserToken)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct ClientId : Swift.ExpressibleByStringLiteral {
+  public let rawValue: Swift.String
+  public init(stringLiteral value: Swift.String)
+  public init(unicodeScalarLiteral value: Swift.String)
+  public init(extendedGraphemeClusterLiteral value: Swift.String)
+  public typealias StringLiteralType = Swift.String
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+}
+public class ModuleModel : ObjectMapper.Mappable {
+  required public init?(map: ObjectMapper.Map)
+  public func mapping(map: ObjectMapper.Map)
+  @objc deinit
+}
+public class Credentials {
+  public var clientId: FriendlyScoreCore.ClientId
+  public var userToken: FriendlyScoreCore.UserToken?
+  public var phoneNumber: FriendlyScoreCore.PhoneNumber?
+  public var userReference: Swift.String?
+  public var environment: FriendlyScoreCore.Environment
+  final public let platform: Swift.String
+  public var isValid: Swift.Bool {
+    get
+  }
+  public init(clientId: FriendlyScoreCore.ClientId, environment: FriendlyScoreCore.Environment = .production)
+  public init(clientId: FriendlyScoreCore.ClientId, userToken: FriendlyScoreCore.UserToken? = nil, environment: FriendlyScoreCore.Environment = .production)
+  public init(clientId: FriendlyScoreCore.ClientId, userReference: Swift.String, environment: FriendlyScoreCore.Environment = .production)
+  @objc deinit
+}
+public enum FriendlyScoreError : Swift.Error {
+  case userReferenceAuth
+  case server
+  case serviceDenied
+  public static func == (a: FriendlyScoreCore.FriendlyScoreError, b: FriendlyScoreCore.FriendlyScoreError) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public class BaseQuestionModel<A> : ObjectMapper.Mappable, FriendlyScoreCore.TypedQuestion where A : FriendlyScoreCore.AnswerModel {
+  public var text: Swift.String
+  public var id: Swift.String
+  public var type: FriendlyScoreCore.QuestionType
+  public var answer: A?
+  public var childQuestions: Swift.Array<FriendlyScoreCore.TypedQuestion>
+  required public init?(map: ObjectMapper.Map)
+  public func mapping(map: ObjectMapper.Map)
+  @objc deinit
+}
+public struct Permission {
+  public enum Kind {
+    case appSwitch
+    case location
+    case contacts
+    case events
+    case reminders
+    case camera
+    case activity
+    case microphone
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: FriendlyScoreCore.Permission.Kind, b: FriendlyScoreCore.Permission.Kind) -> Swift.Bool
+  }
+  public enum Status {
+    case unknown
+    case authorized
+    case unauthorized
+    case disabled
+    public static func == (a: FriendlyScoreCore.Permission.Status, b: FriendlyScoreCore.Permission.Status) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  public func checkPlistDescriptionKeysExistence() -> Swift.Bool
+}
+extension DataSource {
+  public var permissions: Swift.Array<FriendlyScoreCore.Permission> {
+    get
+  }
+}
+public struct PermissionInfo {
+}
+final public class Permissions {
+  public typealias ResultHandler = (Swift.Bool) -> ()
+  public static func check(dataSource: FriendlyScoreCore.DataSource, result: @escaping FriendlyScoreCore.Permissions.ResultHandler)
+  public init(forDataSource data: FriendlyScoreCore.DataSource, result: @escaping FriendlyScoreCore.Permissions.ResultHandler)
+  final public func showAlert(forPermissions permissions: Swift.Array<FriendlyScoreCore.Permission>, labels: Swift.Dictionary<FriendlyScoreCore.Permission.Kind, FriendlyScoreCore.PermissionInfo>)
+  final public func requestPermission(_ permission: FriendlyScoreCore.Permission, result: @escaping (Swift.Bool) -> ())
+  final public func checker(_ permission: FriendlyScoreCore.Permission) -> FriendlyScoreCore.Permission.Status
+  @objc deinit
+}
+public struct DataRequest {
+  public var socialNetwork: FriendlyScoreCore.SocialNetwork
+  public var completion: (FriendlyScoreCore.SocialData) -> ()
+}
+public class Score : ObjectMapper.Mappable {
+  required public init?(map: ObjectMapper.Map)
+  public func mapping(map: ObjectMapper.Map)
+  @objc deinit
+}
+public enum AnalyticsEvent {
+  case action(name: Swift.String, detail: ObjectiveC.NSObject?)
+  case view(name: Swift.String, className: Swift.String)
+}
+public class IntegerAnswerModel : FriendlyScoreCore.AnswerModel {
+  public var value: Swift.Int
+  required public init?(map: ObjectMapper.Map)
+  override public func mapping(map: ObjectMapper.Map)
+  @objc deinit
+}
+public class SDK {
+  public static var bundleIdentifier: Swift.String? {
+    get
+  }
+  public static func alert(title: Swift.String?, content: Swift.String?)
+  public static var customStringsFileName: Swift.String
+  public static var useCustomLocalizableStringsFile: Swift.Bool
+  public static func localizedString(key: Swift.String) -> Swift.String
+  public enum QueryParameter : Swift.String {
+    case error
+    case code
+    public static func get(_ queryParameter: FriendlyScoreCore.SDK.QueryParameter) -> Swift.String
+    public typealias RawValue = Swift.String
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public static var dataSourceViewControllerFactories: [FriendlyScoreCore.DataSourceViewControllerFactory]
+  public static var wifi: FriendlyScoreCore.WifiInfo? {
+    get
+  }
+  public static var carrier: Swift.String? {
+    get
+  }
+  public static var mobileCountryCode: Swift.String? {
+    get
+  }
+  public static var mobileNetworkCode: Swift.String? {
+    get
+  }
+  public static var batteryInfo: (Swift.Double, Swift.String, Swift.Bool) {
+    get
+  }
+  public static var appPlist: Foundation.NSDictionary? {
+    get
+  }
+  public static var locale: Swift.String {
+    get
+  }
+  public static var languageCode: Swift.String {
+    get
+  }
+  @objc deinit
+}
+public enum QuestionType : Swift.String {
+  case select
+  case integer
+  case none
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol DataSourceViewController : UIKit.UIViewController {
+  var id: FriendlyScoreCore.DataSourcePage { get set }
+  var dataSourceDelegate: FriendlyScoreCore.DataSourceViewControllerDelegate? { get set }
+}
+public protocol DataSourceViewControllerDelegate {
+  func next()
+  func prev()
+}
+public class DateFormatTransform : ObjectMapper.TransformType {
+  public typealias Object = Foundation.Date
+  public typealias JSON = Swift.String
+  public func transformFromJSON(_ value: Any?) -> FriendlyScoreCore.DateFormatTransform.Object?
+  public func transformToJSON(_ value: Foundation.Date?) -> FriendlyScoreCore.DateFormatTransform.JSON?
+  @objc deinit
+}
+extension FriendlyScoreCore.SocialNetwork : Swift.Equatable {}
+extension FriendlyScoreCore.SocialNetwork : Swift.Hashable {}
+extension FriendlyScoreCore.DataSource : Swift.Equatable {}
+extension FriendlyScoreCore.DataSource : Swift.Hashable {}
+extension FriendlyScoreCore.DataSource : Swift.RawRepresentable {}
+extension FriendlyScoreCore.DataSourcePage : Swift.Equatable {}
+extension FriendlyScoreCore.DataSourcePage : Swift.Hashable {}
+extension FriendlyScoreCore.DataSourcePage : Swift.RawRepresentable {}
+extension FriendlyScoreCore.DataProcessStatus : Swift.Equatable {}
+extension FriendlyScoreCore.DataProcessStatus : Swift.Hashable {}
+extension FriendlyScoreCore.DataProcessStatus : Swift.RawRepresentable {}
+extension FriendlyScoreCore.InternalError : Swift.Equatable {}
+extension FriendlyScoreCore.InternalError : Swift.Hashable {}
+extension FriendlyScoreCore.Interaction.Touch : Swift.Equatable {}
+extension FriendlyScoreCore.Interaction.Touch : Swift.Hashable {}
+extension FriendlyScoreCore.Interaction.Touch : Swift.RawRepresentable {}
+extension FriendlyScoreCore.ScoreSourceId : Swift.Equatable {}
+extension FriendlyScoreCore.ScoreSourceId : Swift.Hashable {}
+extension FriendlyScoreCore.ScoreSourceId : Swift.RawRepresentable {}
+extension FriendlyScoreCore.Storage.Directory : Swift.Equatable {}
+extension FriendlyScoreCore.Storage.Directory : Swift.Hashable {}
+extension FriendlyScoreCore.Environment : Swift.Equatable {}
+extension FriendlyScoreCore.Environment : Swift.Hashable {}
+extension FriendlyScoreCore.Environment : Swift.RawRepresentable {}
+extension FriendlyScoreCore.FriendlyScoreError : Swift.Equatable {}
+extension FriendlyScoreCore.FriendlyScoreError : Swift.Hashable {}
+extension FriendlyScoreCore.Permission.Kind : Swift.Equatable {}
+extension FriendlyScoreCore.Permission.Kind : Swift.Hashable {}
+extension FriendlyScoreCore.Permission.Status : Swift.Equatable {}
+extension FriendlyScoreCore.Permission.Status : Swift.Hashable {}
+extension FriendlyScoreCore.SDK.QueryParameter : Swift.Equatable {}
+extension FriendlyScoreCore.SDK.QueryParameter : Swift.Hashable {}
+extension FriendlyScoreCore.SDK.QueryParameter : Swift.RawRepresentable {}
+extension FriendlyScoreCore.QuestionType : Swift.Equatable {}
+extension FriendlyScoreCore.QuestionType : Swift.Hashable {}
+extension FriendlyScoreCore.QuestionType : Swift.RawRepresentable {}
