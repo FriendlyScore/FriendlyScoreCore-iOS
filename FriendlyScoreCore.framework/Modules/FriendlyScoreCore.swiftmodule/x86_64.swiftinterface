@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.1.3 effective-4.1.50 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-compiler-version: Apple Swift version 5.2 effective-4.1.50 (swiftlang-1103.0.32.1 clang-1103.0.32.29)
 // swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4 -enforce-exclusivity=checked -O -module-name FriendlyScoreCore
 import AVFoundation
 import Alamofire
@@ -29,7 +29,7 @@ public protocol TypedQuestion {
   var id: Swift.String { get set }
   var childQuestions: Swift.Array<FriendlyScoreCore.TypedQuestion> { get set }
 }
-public class Image {
+@_hasMissingDesignatedInitializers public class Image {
   public class func use(_ name: Swift.String) -> UIKit.UIImage?
   public class func with(dataSource: FriendlyScoreCore.DataSource) -> UIKit.UIImage
   @objc deinit
@@ -231,14 +231,14 @@ public protocol DataSourceViewControllerFactory {
   var id: FriendlyScoreCore.DataSourcePage { get set }
   func create(delegate: FriendlyScoreCore.DataSourceViewControllerDelegate, credentials: FriendlyScoreCore.Credentials, api: FriendlyScoreCore.API, config: FriendlyScoreCore.Config, components: [FriendlyScoreCore.ComponentModel]?, isFormStep: Swift.Bool) -> FriendlyScoreCore.DataSourceViewController?
 }
-public class IntegerQuestionModel : FriendlyScoreCore.BaseQuestionModel<FriendlyScoreCore.IntegerAnswerModel> {
+@_inheritsConvenienceInitializers public class IntegerQuestionModel : FriendlyScoreCore.BaseQuestionModel<FriendlyScoreCore.IntegerAnswerModel> {
   public var min: Swift.Int
   public var max: Swift.Int
   public var minLabel: Swift.String
   public var maxLabel: Swift.String
   override public func mapping(map: ObjectMapper.Map)
-  required public init?(map: ObjectMapper.Map)
   @objc deinit
+  required public init?(map: ObjectMapper.Map)
 }
 public class ComponentModel : ObjectMapper.Mappable {
   public var name: FriendlyScoreCore.ScoreSourceId!
@@ -248,16 +248,16 @@ public class ComponentModel : ObjectMapper.Mappable {
   public func mapping(map: ObjectMapper.Map)
   @objc deinit
 }
-@objc open class BaseNavigationController : UIKit.UINavigationController, UIKit.UINavigationControllerDelegate {
+@objc @_inheritsConvenienceInitializers open class BaseNavigationController : UIKit.UINavigationController, UIKit.UINavigationControllerDelegate {
   @objc override dynamic public func viewDidLoad()
   @objc public func navigationController(_ navigationController: UIKit.UINavigationController, willShow viewController: UIKit.UIViewController, animated: Swift.Bool)
   public func setDefaultAnimationType()
+  @objc deinit
   @available(iOS 5.0, *)
   @objc override dynamic public init(navigationBarClass: Swift.AnyClass?, toolbarClass: Swift.AnyClass?)
   @objc override dynamic public init(rootViewController: UIKit.UIViewController)
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc deinit
 }
 extension BaseNavigationController {
   public func pushViewControllerWithFadeAnimation(_ vc: UIKit.UIViewController)
@@ -295,15 +295,15 @@ public class QuestionSetModel : ObjectMapper.Mappable {
   public func mapping(map: ObjectMapper.Map)
   @objc deinit
 }
-@objc public class DashedLineView : UIKit.UIView {
+@objc @_inheritsConvenienceInitializers public class DashedLineView : UIKit.UIView {
   public var lineLayer: QuartzCore.CAShapeLayer
   public func draw()
   @objc override dynamic public func layoutSubviews()
+  @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
 }
-@objc public class RadioView : UIKit.UIView {
+@objc @_inheritsConvenienceInitializers public class RadioView : UIKit.UIView {
   public var lineLayer: QuartzCore.CAShapeLayer
   public var fillLayer: QuartzCore.CAShapeLayer
   public var fill: Swift.Bool {
@@ -312,11 +312,11 @@ public class QuestionSetModel : ObjectMapper.Mappable {
   }
   public func draw()
   @objc override dynamic public func layoutSubviews()
+  @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
 }
-@objc public class SubmitButton : UIKit.UIButton {
+@objc @_inheritsConvenienceInitializers public class SubmitButton : UIKit.UIButton {
   public var leadColor: UIKit.UIColor {
     get
     set
@@ -467,11 +467,11 @@ public class PsychometryStatus : ObjectMapper.Mappable {
   public func mapping(map: ObjectMapper.Map)
   @objc deinit
 }
-public class SelectQuestionModel : FriendlyScoreCore.BaseQuestionModel<FriendlyScoreCore.SelectAnswerModel> {
+@_inheritsConvenienceInitializers public class SelectQuestionModel : FriendlyScoreCore.BaseQuestionModel<FriendlyScoreCore.SelectAnswerModel> {
   public var options: Swift.Array<FriendlyScoreCore.SelectOptionModel>
   override public func mapping(map: ObjectMapper.Map)
-  required public init?(map: ObjectMapper.Map)
   @objc deinit
+  required public init?(map: ObjectMapper.Map)
 }
 public struct WifiInfo {
   public var name: Swift.String
@@ -532,8 +532,8 @@ public typealias UIButtonTargetClosure = (UIKit.UIButton) -> ()
 @objc public class ClosureWrapper : ObjectiveC.NSObject {
   final public let closure: FriendlyScoreCore.UIButtonTargetClosure
   public init(_ closure: @escaping FriendlyScoreCore.UIButtonTargetClosure)
-  @objc override dynamic public init()
   @objc deinit
+  @objc override dynamic public init()
 }
 extension UISlider {
   public var thumbView: UIKit.UIImageView? {
@@ -561,7 +561,7 @@ public struct FriendlyScore {
   public static func show(page: FriendlyScoreCore.DataSourcePage, with credentials: FriendlyScoreCore.Credentials)
   public static func handleQueryParameters(for url: Foundation.URL)
 }
-public class Storage {
+@_hasMissingDesignatedInitializers public class Storage {
   public enum Directory {
     case documents
     case caches
@@ -599,7 +599,7 @@ public class SelectOptionModel : ObjectMapper.Mappable {
   public func mapping(map: ObjectMapper.Map)
   @objc deinit
 }
-public class SelectAnswerModel : FriendlyScoreCore.AnswerModel {
+@_inheritsConvenienceInitializers public class SelectAnswerModel : FriendlyScoreCore.AnswerModel {
   public var id: Swift.String
   required public init?(map: ObjectMapper.Map)
   convenience public init?(id: Swift.String)
@@ -617,6 +617,7 @@ public class API {
   public init(credentials: FriendlyScoreCore.Credentials)
   public func dataProcessStatus(completion: @escaping (Swift.Array<FriendlyScoreCore.DataProcessModel>) -> (), failure: @escaping (Swift.Error?) -> ())
   public func personalData(name: Swift.String, lastName: Swift.String, dob: Swift.String, completion: @escaping (FriendlyScoreCore.BorrowerPersonalDataModel) -> (), failure: @escaping (Swift.Error?) -> ())
+  public func authorizeWithUserReference(completion: @escaping (FriendlyScoreCore.UserToken) -> (), failure: @escaping (Swift.Error?) -> ())
   @objc deinit
 }
 public struct User : Swift.Codable {
@@ -687,11 +688,11 @@ public struct Permission {
     case camera
     case activity
     case microphone
+    public static func == (a: FriendlyScoreCore.Permission.Kind, b: FriendlyScoreCore.Permission.Kind) -> Swift.Bool
     public var hashValue: Swift.Int {
       get
     }
     public func hash(into hasher: inout Swift.Hasher)
-    public static func == (a: FriendlyScoreCore.Permission.Kind, b: FriendlyScoreCore.Permission.Kind) -> Swift.Bool
   }
   public enum Status {
     case unknown
@@ -735,13 +736,14 @@ public enum AnalyticsEvent {
   case action(name: Swift.String, detail: ObjectiveC.NSObject?)
   case view(name: Swift.String, className: Swift.String)
 }
-public class IntegerAnswerModel : FriendlyScoreCore.AnswerModel {
+@_inheritsConvenienceInitializers public class IntegerAnswerModel : FriendlyScoreCore.AnswerModel {
   public var value: Swift.Int
   required public init?(map: ObjectMapper.Map)
   override public func mapping(map: ObjectMapper.Map)
   @objc deinit
 }
-public class SDK {
+@_hasMissingDesignatedInitializers public class SDK {
+  public static var credentials: FriendlyScoreCore.Credentials?
   public static var bundleIdentifier: Swift.String? {
     get
   }
@@ -804,7 +806,7 @@ public protocol DataSourceViewControllerDelegate {
   func next()
   func prev()
 }
-public class DateFormatTransform : ObjectMapper.TransformType {
+@_hasMissingDesignatedInitializers public class DateFormatTransform : ObjectMapper.TransformType {
   public typealias Object = Foundation.Date
   public typealias JSON = Swift.String
   public func transformFromJSON(_ value: Any?) -> FriendlyScoreCore.DateFormatTransform.Object?

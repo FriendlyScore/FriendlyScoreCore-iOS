@@ -6,35 +6,23 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		7ge+GZWL6LW8YPD6L2mTrTuxFhY=
+		zj57wWCxjjnd+afIJBb5jR7qOu4=
 		</data>
-		<key>CodeVerificationViewController.nib/objects-13.0+.nib</key>
+		<key>CodeVerificationViewController.nib</key>
 		<data>
-		5p4r/MyncpC2NLYexqbpc2TRyrE=
+		bsCFyUHhv12VVV8f/BrpCRl3bVc=
 		</data>
-		<key>CodeVerificationViewController.nib/runtime.nib</key>
+		<key>ConfigLoaderViewController.nib</key>
 		<data>
-		2El3W4VGyuqO8STDE1N0kth5NPQ=
+		4gWrAhM/RVQ0puDkmpw8ZlVbLZ4=
 		</data>
-		<key>ConfigLoaderViewController.nib/objects-13.0+.nib</key>
+		<key>GenericScoreSourceViewController.nib</key>
 		<data>
-		ZeHYjhq1msFnK8E2loSzn8RBxdQ=
-		</data>
-		<key>ConfigLoaderViewController.nib/runtime.nib</key>
-		<data>
-		HRQwpS8zI73yntWiYJmCzTD5OtE=
-		</data>
-		<key>GenericScoreSourceViewController.nib/objects-13.0+.nib</key>
-		<data>
-		KOZmlGeQxa5ZIhOc7bi1xREYvLA=
-		</data>
-		<key>GenericScoreSourceViewController.nib/runtime.nib</key>
-		<data>
-		3DafCnclISX/v8XLlCQLpPl5WzA=
+		p4TwD6OVQxWpCeBXoxqajdhw160=
 		</data>
 		<key>Headers/FriendlyScoreCore-Swift.h</key>
 		<data>
-		84vjVDKhFWaeFB16vMEGGq+qMJk=
+		hJXflR5Iyu11qSLY3L5JLv3jTsc=
 		</data>
 		<key>Headers/FriendlyScoreCore.h</key>
 		<data>
@@ -42,43 +30,39 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		CglSIUaaaWx/Jp5MMN6rml2/sRw=
+		34OtrYnu7U3Px9PS++SGWXHcMoE=
 		</data>
 		<key>Modules/FriendlyScoreCore.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		6ld9Qidwq4s7E9cPOPPGp5ALbPc=
+		Rdyj47TLqBTW7mWrgf8MGWpwkus=
 		</data>
 		<key>Modules/FriendlyScoreCore.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		pO7mEyxT8BfBzBxMjCCiCKqjxaU=
+		fvYGWt7tkhqlMzrpotaGpwTYovc=
 		</data>
 		<key>Modules/FriendlyScoreCore.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		mTi0DnmrgOH/S1dcmA+5TLFlKZ4=
+		mff06GOJg4ne7gioWnDHJ3lxnNU=
 		</data>
 		<key>Modules/FriendlyScoreCore.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		6ld9Qidwq4s7E9cPOPPGp5ALbPc=
+		Rdyj47TLqBTW7mWrgf8MGWpwkus=
 		</data>
 		<key>Modules/FriendlyScoreCore.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		pO7mEyxT8BfBzBxMjCCiCKqjxaU=
+		fvYGWt7tkhqlMzrpotaGpwTYovc=
 		</data>
 		<key>Modules/FriendlyScoreCore.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		mTi0DnmrgOH/S1dcmA+5TLFlKZ4=
+		mff06GOJg4ne7gioWnDHJ3lxnNU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		SRdJyaq8xAk4FaLNkCAtAy58iEU=
 		</data>
-		<key>PhoneNumberViewController.nib/objects-13.0+.nib</key>
+		<key>PhoneNumberViewController.nib</key>
 		<data>
-		HHnqDaL+f1h1u6TjEbvMHuMYhww=
-		</data>
-		<key>PhoneNumberViewController.nib/runtime.nib</key>
-		<data>
-		bEctzQX/MVgK6H5Tfkg/E2SzN2E=
+		xCgfWELJuLJMBXJ76F2dgbM55Fw=
 		</data>
 		<key>en.lproj/Localizable.strings</key>
 		<dict>
@@ -123,56 +107,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Zs/jytQf5EUxXIEiPTJWkfHZfPECuzwuj218AQlVXVg=
+			JgzJJulxlIBDmlSqOwpkqQME5aFNhMvn2mKwiYBhVPM=
 			</data>
 		</dict>
-		<key>CodeVerificationViewController.nib/objects-13.0+.nib</key>
+		<key>CodeVerificationViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OhFIXf4xuj/37NuOHCFS8MOkxWGL0aygC8YX0AjyTDM=
+			n+EvjMle2CcxvUYY5tCiBMUfWhVLPyZ6yib31TbeTHk=
 			</data>
 		</dict>
-		<key>CodeVerificationViewController.nib/runtime.nib</key>
+		<key>ConfigLoaderViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SPL/iMg02h++BSaK1oBfS4M70cq93eXQQsdpL04lCIo=
+			EzTapjOv0w8i7Kjz3w9068XQf04vUdnRrbnzknliK0Y=
 			</data>
 		</dict>
-		<key>ConfigLoaderViewController.nib/objects-13.0+.nib</key>
+		<key>GenericScoreSourceViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lQKWm5XIRUeY3EORYzxpbqGGhPmkGP/fNwDmZ0tpbJA=
-			</data>
-		</dict>
-		<key>ConfigLoaderViewController.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			4Xe4ctKF9Ytfn29cqxTK29EOru3sGoMjcgfLLossXI0=
-			</data>
-		</dict>
-		<key>GenericScoreSourceViewController.nib/objects-13.0+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Xv/xh9M3H9XUxZt8o/SccnEjcl0Q3s4OI7x/A1ykfzk=
-			</data>
-		</dict>
-		<key>GenericScoreSourceViewController.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			E/X/1LZ5bd96al5lmziFOetGLM2554dvmcIXJPYu+O0=
+			qsICymCdAqtN5rM1vYyKakCUo2iOn9b2TR3yAmAuMf0=
 			</data>
 		</dict>
 		<key>Headers/FriendlyScoreCore-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ujRk4hsRg/PNKzCK6pCu2AQuJ9/Ma1ODBmIWybSeeP8=
+			71eKR/DCorrvite9IR8BdapB+dYM40oAw8eowuf+pu8=
 			</data>
 		</dict>
 		<key>Headers/FriendlyScoreCore.h</key>
@@ -186,42 +149,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yXLVBNX8Lhk57At3j6HjOdCg/UA2HmDw5BU9A0gv144=
+			nYcbzwmV3RPcJoGqg1/dHzcyxHoZkYVeAdhNthBkFik=
 			</data>
 		</dict>
 		<key>Modules/FriendlyScoreCore.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fDJmoRyivYo+TKnZmpqXxWJUWNFvu/yK5aRBVRuRolI=
+			vEmm1C/FJZmsDVW7J4OgR7AiM2xIuGqqNNrNUMUcEGE=
 			</data>
 		</dict>
 		<key>Modules/FriendlyScoreCore.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			52kgoW33YXmf3T50R5Soe1MppgKY4wiGrNnSRi6KPP4=
+			b+XpuwlOGjpwZajavh06HZ64Yrh9TgHJG0Gwn1Dwh4M=
 			</data>
 		</dict>
 		<key>Modules/FriendlyScoreCore.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yXLVBNX8Lhk57At3j6HjOdCg/UA2HmDw5BU9A0gv144=
+			nYcbzwmV3RPcJoGqg1/dHzcyxHoZkYVeAdhNthBkFik=
 			</data>
 		</dict>
 		<key>Modules/FriendlyScoreCore.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fDJmoRyivYo+TKnZmpqXxWJUWNFvu/yK5aRBVRuRolI=
+			vEmm1C/FJZmsDVW7J4OgR7AiM2xIuGqqNNrNUMUcEGE=
 			</data>
 		</dict>
 		<key>Modules/FriendlyScoreCore.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			52kgoW33YXmf3T50R5Soe1MppgKY4wiGrNnSRi6KPP4=
+			b+XpuwlOGjpwZajavh06HZ64Yrh9TgHJG0Gwn1Dwh4M=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -231,18 +194,11 @@
 			I/Yz+ony08+/A1l75R47+710wyJGwv7jaIv4q+p+O3E=
 			</data>
 		</dict>
-		<key>PhoneNumberViewController.nib/objects-13.0+.nib</key>
+		<key>PhoneNumberViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			x/PD3Vd15rfIjvlI1yBpV9N9WwfJFt+6a0spf2iGmqs=
-			</data>
-		</dict>
-		<key>PhoneNumberViewController.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			NzvzzOp/VedFH3WZkXWsnT7KP419raeJW9jCT2aDL+c=
+			8rvCYS2xTd0PLdXhNeMFzo+g3+GaTCmi6TNh5eOeE6I=
 			</data>
 		</dict>
 		<key>en.lproj/Localizable.strings</key>
