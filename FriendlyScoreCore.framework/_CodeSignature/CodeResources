@@ -6,23 +6,23 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		zj57wWCxjjnd+afIJBb5jR7qOu4=
+		cXvqy6EG7irpIGA1zom5U+gJTOM=
 		</data>
 		<key>CodeVerificationViewController.nib</key>
 		<data>
-		bsCFyUHhv12VVV8f/BrpCRl3bVc=
+		d0vHvv8TuU/DNwkpQt6H4zQVon8=
 		</data>
 		<key>ConfigLoaderViewController.nib</key>
 		<data>
-		4gWrAhM/RVQ0puDkmpw8ZlVbLZ4=
+		J61+33mliIhYmomsF5i2k9yM+xM=
 		</data>
 		<key>GenericScoreSourceViewController.nib</key>
 		<data>
-		p4TwD6OVQxWpCeBXoxqajdhw160=
+		FwSqlU8WHMCh0DWQATg/c3vpNto=
 		</data>
 		<key>Headers/FriendlyScoreCore-Swift.h</key>
 		<data>
-		hJXflR5Iyu11qSLY3L5JLv3jTsc=
+		F9B2s7NbRreotLKU0OtpqegNKs4=
 		</data>
 		<key>Headers/FriendlyScoreCore.h</key>
 		<data>
@@ -30,31 +30,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		34OtrYnu7U3Px9PS++SGWXHcMoE=
+		O8p7OozmOWAIAVI1wNKJhjcEK7I=
 		</data>
 		<key>Modules/FriendlyScoreCore.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		Rdyj47TLqBTW7mWrgf8MGWpwkus=
+		LbDDe8ZXcyr5XsWQsUGtl5/J5wI=
 		</data>
 		<key>Modules/FriendlyScoreCore.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		fvYGWt7tkhqlMzrpotaGpwTYovc=
+		SJkPON6ZmmWr73udEUQcajmOrBo=
 		</data>
 		<key>Modules/FriendlyScoreCore.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		mff06GOJg4ne7gioWnDHJ3lxnNU=
+		6Q5e9JdhOxle01SCTEnvlMEVXXI=
 		</data>
 		<key>Modules/FriendlyScoreCore.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		Rdyj47TLqBTW7mWrgf8MGWpwkus=
+		LbDDe8ZXcyr5XsWQsUGtl5/J5wI=
 		</data>
 		<key>Modules/FriendlyScoreCore.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		fvYGWt7tkhqlMzrpotaGpwTYovc=
+		SJkPON6ZmmWr73udEUQcajmOrBo=
 		</data>
 		<key>Modules/FriendlyScoreCore.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		mff06GOJg4ne7gioWnDHJ3lxnNU=
+		6Q5e9JdhOxle01SCTEnvlMEVXXI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>PhoneNumberViewController.nib</key>
 		<data>
-		xCgfWELJuLJMBXJ76F2dgbM55Fw=
+		G1zQnaQc6IucqGa1OpDoG1PfElc=
 		</data>
 		<key>en.lproj/Localizable.strings</key>
 		<dict>
@@ -107,35 +107,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JgzJJulxlIBDmlSqOwpkqQME5aFNhMvn2mKwiYBhVPM=
+			3HIvMgKMmWla4IuHRpVqGEIz0C2fKK/bX2d1n91pD/k=
 			</data>
 		</dict>
 		<key>CodeVerificationViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			n+EvjMle2CcxvUYY5tCiBMUfWhVLPyZ6yib31TbeTHk=
+			k9GBJ3/aXuSP910Wh7qVQi5UQb5dbkoBPSkU24WKUA0=
 			</data>
 		</dict>
 		<key>ConfigLoaderViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EzTapjOv0w8i7Kjz3w9068XQf04vUdnRrbnzknliK0Y=
+			CNsg3cLSn1ZJJ56ZySZAw8uFVSkKsJaqrzY17Unt4sY=
 			</data>
 		</dict>
 		<key>GenericScoreSourceViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qsICymCdAqtN5rM1vYyKakCUo2iOn9b2TR3yAmAuMf0=
+			QoOFDRQyqrmvrepV/Nu6COhCk1+0aSI3FiVxambpJK0=
 			</data>
 		</dict>
 		<key>Headers/FriendlyScoreCore-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			71eKR/DCorrvite9IR8BdapB+dYM40oAw8eowuf+pu8=
+			Vw0DJ5OTHc05GB57f+6Ey4Ok/pWoXXJ3HqQ7Z+3xXOU=
 			</data>
 		</dict>
 		<key>Headers/FriendlyScoreCore.h</key>
@@ -149,42 +149,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nYcbzwmV3RPcJoGqg1/dHzcyxHoZkYVeAdhNthBkFik=
+			32Iz9lJFhkcTjeU5JRGaiN0f6f3QtuhwIfpn+c7Xue8=
 			</data>
 		</dict>
 		<key>Modules/FriendlyScoreCore.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vEmm1C/FJZmsDVW7J4OgR7AiM2xIuGqqNNrNUMUcEGE=
+			Lp2Zyg0H+x/1HxF6zvGaoYZvjBgITxweavUhttRdgLI=
 			</data>
 		</dict>
 		<key>Modules/FriendlyScoreCore.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			b+XpuwlOGjpwZajavh06HZ64Yrh9TgHJG0Gwn1Dwh4M=
+			JDAlaLSDgi1Y+DWlapR3/u9GhGSgPR1JzHBGpiRXXjc=
 			</data>
 		</dict>
 		<key>Modules/FriendlyScoreCore.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nYcbzwmV3RPcJoGqg1/dHzcyxHoZkYVeAdhNthBkFik=
+			32Iz9lJFhkcTjeU5JRGaiN0f6f3QtuhwIfpn+c7Xue8=
 			</data>
 		</dict>
 		<key>Modules/FriendlyScoreCore.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vEmm1C/FJZmsDVW7J4OgR7AiM2xIuGqqNNrNUMUcEGE=
+			Lp2Zyg0H+x/1HxF6zvGaoYZvjBgITxweavUhttRdgLI=
 			</data>
 		</dict>
 		<key>Modules/FriendlyScoreCore.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			b+XpuwlOGjpwZajavh06HZ64Yrh9TgHJG0Gwn1Dwh4M=
+			JDAlaLSDgi1Y+DWlapR3/u9GhGSgPR1JzHBGpiRXXjc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -198,7 +198,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8rvCYS2xTd0PLdXhNeMFzo+g3+GaTCmi6TNh5eOeE6I=
+			gfa7C/ArwsWsOWoEcy/8IJQPgt+QJCKefEYDXb9YJcI=
 			</data>
 		</dict>
 		<key>en.lproj/Localizable.strings</key>
