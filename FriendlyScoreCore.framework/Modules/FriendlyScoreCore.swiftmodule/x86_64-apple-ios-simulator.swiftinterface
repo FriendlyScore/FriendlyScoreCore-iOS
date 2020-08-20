@@ -514,6 +514,17 @@ public protocol FlowController {
   init(configure: FriendlyScoreCore.FlowConfigure)
   func start()
 }
+open class StartFlowController : FriendlyScoreCore.FlowController {
+  public var childFlow: FriendlyScoreCore.FlowController?
+  public var configure: FriendlyScoreCore.FlowConfigure
+  required public init(configure: FriendlyScoreCore.FlowConfigure)
+  public init(configure: FriendlyScoreCore.FlowConfigure, credentials: FriendlyScoreCore.Credentials, page: FriendlyScoreCore.DataSourcePage? = nil)
+  public func start()
+  public func reauthorize(credentials: FriendlyScoreCore.Credentials)
+  public func configLoaded(_ config: (modules: FriendlyScoreCore.ModulesModel, dataProcessStatuses: [FriendlyScoreCore.DataProcessModel]?, personalData: FriendlyScoreCore.BorrowerPersonalDataModel?))
+  open func startDataSourcePageViewFlowController(with config: FriendlyScoreCore.Config)
+  @objc deinit
+}
 public typealias Config = (modules: [FriendlyScoreCore.ModuleModel], dataProcessStatuses: [FriendlyScoreCore.DataProcessModel], personalData: FriendlyScoreCore.BorrowerPersonalDataModel)
 extension UIView {
   public var gardientBackgroundColor: [UIKit.UIColor] {
@@ -557,8 +568,7 @@ public struct FriendlyScore {
   public static var url: FriendlyScoreCore.Url
   public static var modalPresentationStyle: UIKit.UIModalPresentationStyle
   public static var currentSocialNetwork: FriendlyScoreCore.SocialNetwork?
-  public static func show(with credentials: FriendlyScoreCore.Credentials)
-  public static func show(page: FriendlyScoreCore.DataSourcePage, with credentials: FriendlyScoreCore.Credentials)
+  public static func show(with credentials: FriendlyScoreCore.Credentials, isDarkMode: Swift.Bool = false)
   public static func handleQueryParameters(for url: Foundation.URL)
 }
 @_hasMissingDesignatedInitializers public class Storage {
@@ -591,6 +601,11 @@ public enum Environment : Swift.String {
   public var rawValue: Swift.String {
     get
   }
+}
+public class ModulesModel : ObjectMapper.Mappable {
+  required public init?(map: ObjectMapper.Map)
+  public func mapping(map: ObjectMapper.Map)
+  @objc deinit
 }
 public class SelectOptionModel : ObjectMapper.Mappable {
   public var id: Swift.String
@@ -743,7 +758,9 @@ public enum AnalyticsEvent {
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class SDK {
+  public static var navigationController: FriendlyScoreCore.BaseNavigationController
   public static var credentials: FriendlyScoreCore.Credentials?
+  public static var isDarkMode: Swift.Bool
   public static var bundleIdentifier: Swift.String? {
     get
   }
