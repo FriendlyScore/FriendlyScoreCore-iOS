@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.2.2 effective-4.1.50 (swiftlang-1103.0.32.6 clang-1103.0.32.51)
+// swift-compiler-version: Apple Swift version 5.3.2 effective-4.1.50 (swiftlang-1200.0.45 clang-1200.0.32.28)
 // swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 4 -enforce-exclusivity=checked -O -module-name FriendlyScoreCore
 import AVFoundation
 import Alamofire
@@ -18,7 +18,6 @@ import JGProgressHUD
 import Moya
 import ObjectMapper
 import PhoneNumberKit
-import Result
 import SnapKit
 import Swift
 import SystemConfiguration
@@ -202,6 +201,9 @@ extension UIWindow {
   }
 }
 extension UIColor {
+  convenience public init?(hex: Swift.String)
+}
+extension UIColor {
   convenience public init(hex6: Swift.UInt32, alpha: CoreGraphics.CGFloat = 1)
 }
 public class AnswerModel : ObjectMapper.Mappable {
@@ -229,7 +231,7 @@ public enum InternalError : Swift.Error {
 }
 public protocol DataSourceViewControllerFactory {
   var id: FriendlyScoreCore.DataSourcePage { get set }
-  func create(delegate: FriendlyScoreCore.DataSourceViewControllerDelegate, credentials: FriendlyScoreCore.Credentials, api: FriendlyScoreCore.API, config: FriendlyScoreCore.Config, components: [FriendlyScoreCore.ComponentModel]?, isFormStep: Swift.Bool) -> FriendlyScoreCore.DataSourceViewController?
+  func create(delegate: FriendlyScoreCore.DataSourceViewControllerDelegate, credentials: FriendlyScoreCore.Credentials, api: FriendlyScoreCore.API, config: FriendlyScoreCore.Config, components: [FriendlyScoreCore.ComponentModel]?, isFormStep: Swift.Bool, theme: FriendlyScoreCore.ConnectTheme?, showCloseIconOnList: Swift.Bool, closeIconTitleOnList: Swift.String) -> FriendlyScoreCore.DataSourceViewController?
 }
 @_inheritsConvenienceInitializers public class IntegerQuestionModel : FriendlyScoreCore.BaseQuestionModel<FriendlyScoreCore.IntegerAnswerModel> {
   public var min: Swift.Int
@@ -249,7 +251,7 @@ public class ComponentModel : ObjectMapper.Mappable {
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers open class BaseNavigationController : UIKit.UINavigationController, UIKit.UINavigationControllerDelegate {
-  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic open func viewDidLoad()
   @objc public func navigationController(_ navigationController: UIKit.UINavigationController, willShow viewController: UIKit.UIViewController, animated: Swift.Bool)
   public func setDefaultAnimationType()
   @objc deinit
@@ -264,7 +266,7 @@ extension BaseNavigationController {
 }
 public typealias JSONData = [Swift.String : Any]
 public class Interaction<A> where A : FriendlyScoreCore.AnswerModel {
-  public var interactions: Swift.Array<FriendlyScoreCore.JSONData>
+  public var interactions: [FriendlyScoreCore.JSONData]
   public enum Touch : Swift.String {
     case up
     case down
@@ -288,7 +290,7 @@ public enum SocialData {
 public class QuestionSetModel : ObjectMapper.Mappable {
   public var id: Swift.String
   public var locale: Swift.String?
-  public var questions: Swift.Array<FriendlyScoreCore.TypedQuestion>
+  public var questions: [FriendlyScoreCore.TypedQuestion]
   public var title: Swift.String?
   public var status: FriendlyScoreCore.PsychometryStatus?
   required public init?(map: ObjectMapper.Map)
@@ -415,7 +417,7 @@ public class AnswerResponseModel : ObjectMapper.Mappable {
   @objc deinit
 }
 public class AnswersResponseModel : ObjectMapper.Mappable {
-  public var followupQuestions: Swift.Array<FriendlyScoreCore.AnswerResponseModel>
+  public var followupQuestions: [FriendlyScoreCore.AnswerResponseModel]
   required public init?(map: ObjectMapper.Map)
   public func mapping(map: ObjectMapper.Map)
   @objc deinit
@@ -468,7 +470,7 @@ public class PsychometryStatus : ObjectMapper.Mappable {
   @objc deinit
 }
 @_inheritsConvenienceInitializers public class SelectQuestionModel : FriendlyScoreCore.BaseQuestionModel<FriendlyScoreCore.SelectAnswerModel> {
-  public var options: Swift.Array<FriendlyScoreCore.SelectOptionModel>
+  public var options: [FriendlyScoreCore.SelectOptionModel]
   override public func mapping(map: ObjectMapper.Map)
   @objc deinit
   required public init?(map: ObjectMapper.Map)
@@ -484,8 +486,8 @@ public struct UserToken : Swift.ExpressibleByStringLiteral, Swift.Codable {
   public init(stringLiteral value: Swift.String)
   public init(unicodeScalarLiteral value: Swift.String)
   public init(extendedGraphemeClusterLiteral value: Swift.String)
-  public typealias StringLiteralType = Swift.String
   public init(from decoder: Swift.Decoder) throws
+  public typealias StringLiteralType = Swift.String
   public func encode(to encoder: Swift.Encoder) throws
   public typealias ExtendedGraphemeClusterLiteralType = Swift.String
   public typealias UnicodeScalarLiteralType = Swift.String
@@ -557,7 +559,7 @@ public struct FriendlyScore {
   public static var url: FriendlyScoreCore.Url
   public static var modalPresentationStyle: UIKit.UIModalPresentationStyle
   public static var currentSocialNetwork: FriendlyScoreCore.SocialNetwork?
-  public static func show(with credentials: FriendlyScoreCore.Credentials)
+  public static func show(with credentials: FriendlyScoreCore.Credentials, theme: FriendlyScoreCore.ConnectTheme? = .light, showOnlyBackButtonIcon: Swift.Bool = true, backButtonLabel: Swift.String = "Back")
   public static func show(page: FriendlyScoreCore.DataSourcePage, with credentials: FriendlyScoreCore.Credentials)
   public static func handleQueryParameters(for url: Foundation.URL)
 }
@@ -585,7 +587,6 @@ public struct Url {
 public enum Environment : Swift.String {
   case production
   case sandbox
-  case developer
   public typealias RawValue = Swift.String
   public init?(rawValue: Swift.String)
   public var rawValue: Swift.String {
@@ -662,6 +663,8 @@ public enum FriendlyScoreError : Swift.Error {
   case userReferenceAuth
   case server
   case serviceDenied
+  case jsonMap
+  case filePath
   public static func == (a: FriendlyScoreCore.FriendlyScoreError, b: FriendlyScoreCore.FriendlyScoreError) -> Swift.Bool
   public var hashValue: Swift.Int {
     get
@@ -673,7 +676,7 @@ public class BaseQuestionModel<A> : ObjectMapper.Mappable, FriendlyScoreCore.Typ
   public var id: Swift.String
   public var type: FriendlyScoreCore.QuestionType
   public var answer: A?
-  public var childQuestions: Swift.Array<FriendlyScoreCore.TypedQuestion>
+  public var childQuestions: [FriendlyScoreCore.TypedQuestion]
   required public init?(map: ObjectMapper.Map)
   public func mapping(map: ObjectMapper.Map)
   @objc deinit
@@ -731,6 +734,16 @@ public class Score : ObjectMapper.Mappable {
   required public init?(map: ObjectMapper.Map)
   public func mapping(map: ObjectMapper.Map)
   @objc deinit
+}
+public enum ConnectTheme {
+  case light
+  case dark
+  case custom(themePath: Swift.String)
+}
+extension ConnectTheme {
+  public var path: Swift.String {
+    get
+  }
 }
 public enum AnalyticsEvent {
   case action(name: Swift.String, detail: ObjectiveC.NSObject?)

@@ -1,0 +1,30 @@
+{
+    "connectBackgroundColor": "#FFFFFF",
+    "connectConsentDividerColor": "#F4F4F4",
+    "connectBankItemBackgroundColor": "#FFFFFF",
+    "connectBankItemTextColor": "#2B2B2B",
+    "connectToolbarIconsColor": "#484848",
+    "connectToolbarTextColor": "#FFFFFF",
+    "connectBankItemBorderColor": "#EBEBEB",
+    "connectBankMainTextColor": "#000000",
+    "connectCancelButtonColor": "#A4A4A4",
+    "connectNextButtonColor": "#7038A7",
+    "connectButtonTextColor": "#A4A4A4",
+    "connectFilterPageTitleColor": "#262626",
+    "connectFilterPageSubTitleColor": "#757575",
+    "connectBankDetailMarkerColor": "#21BBAB",
+    "connectBankDetailDisconnectButtonColor": "#D3D3D3",
+    "connectedBankItemConnectedStatusColor": "#11C0AE",
+    "connectBankItemUnavailableStatusColor": "#DA3529",
+    "connectBankItemDisabledTextColor": "#332B2B2B",
+    "connectNavigationButtonBackgroundColor": "#332B2B2B",
+    "connectToolbarDividerColor": "#332B2B2B",
+    "connectNavigationBackButtonItems": "#484848",
+    "connectFilterButtonDisabledColor": "#A4A4A4",
+    "connectToolbarSearchTextColor": "#A0A7B1",
+    "connectToolbarSearchCursorColor": "#A0A7B1",
+    "connectFilterPageTitleColor": "#262626"
+}
+
+
+
